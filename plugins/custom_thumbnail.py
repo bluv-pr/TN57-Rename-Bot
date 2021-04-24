@@ -12,7 +12,7 @@ if bool(os.environ.get("WEBHOOK", False)):
 else:
     from config import Config
 
-from script import script
+from translation import Translation
 from pyrogram import Client, filters
 
 import database.database as sql
@@ -51,7 +51,7 @@ async def save_photo(bot, update):
         )
         await bot.send_message(
             chat_id=update.chat.id,
-            text=script.SAVED_THUMB,
+            text=Translation.SAVED_CUSTOM_THUMB_NAIL,
             reply_to_message_id=update.message_id
         )
 
@@ -81,7 +81,7 @@ async def delete_thumbnail(bot, update):
 
     await bot.send_message(
         chat_id=update.chat.id,
-        text=script.DEL_THUMB,
+        text=Translation.DEL_ETED_CUSTOM_THUMB_NAIL,
         reply_to_message_id=update.message_id
     )
 
@@ -118,6 +118,6 @@ async def show_thumb(bot, update):
     else:
         await bot.send_message(
             chat_id=update.chat.id,
-            text=script.NO_THUMB,
+            text=Translation.NO_THUMB_FOUND,
             reply_to_message_id=update.message_id
         )
