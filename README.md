@@ -11,4 +11,4 @@ An Multi purpose Bot Which Can :-
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/bluv-pr/TN57-Rename-Bot)
 
 If you Find Any Bugs Or Want to Give Your Feedbacks Then Kindly Contact Us Through [Telegram ](https://telegram.dog/BLuVDS) 
-Also Support Our Channel [Mai_bOTs](https://telegram.dog/TN57_BotZ) 
+Also Support Our Channel [TN57_BotZ](https://telegram.dog/TN57_BotZ) 
