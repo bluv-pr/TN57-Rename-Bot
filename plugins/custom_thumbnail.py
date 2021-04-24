@@ -23,7 +23,12 @@ from database.database import *
 @Client.on_message(filters.photo)
 async def save_photo(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
-        <b>Sorry You Are B a n n e d...!!! \n \nContact My Dev 👉 @BluVds To Resolve This Problem</b>")
+        update_channel = Config.UPDATE_CHANNEL
+    if update_channel:
+        try:
+            user = await bot.get_chat_member(update_channel, update.chat.id)
+            if user.status == "kicked":
+               await update.reply_text("<b>Sorry You Are B a n n e d...!!! \n \nContact My Dev 👉 @BluVds To Resolve This Problem</b>")
                return
         except UserNotParticipant:
             await update.reply_text(
@@ -34,7 +39,7 @@ async def save_photo(bot, update):
             )
             return
         else:
-await bot.delete_messages(
+            await bot.delete_messages(
             chat_id=update.chat.id,
             message_ids=update.message_id,
             revoke=True
