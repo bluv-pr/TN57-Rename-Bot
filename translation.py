@@ -33,7 +33,16 @@ class Translation(object):
 """
     USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
     IFLONG_FILE_NAME = """<b>Hey Yo Bro!!😳 Are You Kidding Me...Decrease The Number Of Letters🤭😹</b>"""
-    ABOUT_ME = """<b>Bruh : \n Im Telegram File Renamer Bot Which Can Rename A Telegram Files. \n You Can Set Permanent Thumbnail For The File So You Don't Have To Send Custom Thumbs All The Time To Me \n \n i can also convert files into videos \n Feedback @BLuVDS If You Found Me Useful</b>"""
+    ABOUT_ME ="""
+<b>My Name :</b> <a href='https://t.me/TN57_Renamer_Bot'>TN57 Renamer Bot</a>\n
+<b>My Update Channel :</b> <a href='https://t.me/TN57_BotZ'>TN57_BotZ</a>\n
+<b>Version :</b> <a href='https://t.me/TN57_Renamer_Bot'>0.9.2 beta</a>\n
+<b>Leech Group :</b> <a href='https://t.me/TN57_Leech'>Click Here</a>\n
+<b>Server :</b> <a href='https://heroku.com'>Heroku</a>\n
+<b>Library :</b> <a href='https://github.com/pyrogram'>Pyrogram 1.2.8</a>\n
+<b>Language :</b> <a href='https://www.python.org'>Python 3.9.4</a>\n
+<b>Developer :</b> <a href='https://t.me/BLuVDS'>✯ °•Bᴀʟᴀᴊɪ•° ✯</a>\n
+<b>Support Group :</b> <a href='https://t.me/TN57_BotzSupport'>Click Here</a>\n"""
     HELP_USER = """Ohh You Want Help?? 😅
     
 1.🔹 <b>Send me any Telegram File.</b> \n
