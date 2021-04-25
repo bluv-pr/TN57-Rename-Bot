@@ -69,7 +69,7 @@ async def text(bot, update):
 
 
 @Client.on_callback_query()
-async def button(bot, update):
+      async def button(bot, update):
  
       if  'DM'  in update.data:
                 await update.message.delete()
