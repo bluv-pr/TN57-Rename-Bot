@@ -27,7 +27,7 @@ from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyb
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel 
 
 
-@pyrogram.Client.on_message(pyrogram.filters.command(["start"]))
+@Client.on_message(filters.command(["start"]))
 async def text(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are Banned")
@@ -49,8 +49,12 @@ async def text(bot, update):
             )
             return
         else:
-            await update.reply_text(Translation.START_TEXT.format(update.from_user.first_name),
-        reply_markup=InlineKeyboardMarkup(
+            await update.reply_text(
+          chat_id=update.chat.id,
+          text=Translation.START_TEXT,
+          parse_mode="html",
+          disable_web_page_preview=True,
+          reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton('🤠Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ🤠', url='https://t.me/TN57_BotZ'),
@@ -58,10 +62,14 @@ async def text(bot, update):
                 ],
                 [
                     InlineKeyboardButton('😼Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ👾', url='https://t.me/TN57_BotzSupport'),
-                    InlineKeyboardButton('☣️Lᴇᴇᴄʜ Gʀᴏᴜᴘ☣️', url='https://t.me/TN57_Leech')
+                    InlineKeyboardButton('«Cʟᴏsᴇ🔐»', callback_data='DM')
                 ]
             ]
-        ),
-        reply_to_message_id=update.message_id
-    )
-            return 
+        )
+
+
+@Client.on_callback_query()
+async def button(bot, update):
+ 
+      if  'DM'  in update.data:
+                await update.message.delete()
