@@ -53,18 +53,15 @@ async def text(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Support Channel', url='https://t.me/TN57_BotZ'),
-                    InlineKeyboardButton('Feedback', url='https://t.me/BLuVDS')
+                    InlineKeyboardButton('🤠Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ🤠', url='https://t.me/TN57_BotZ'),
+                    InlineKeyboardButton('🤓Fᴇᴇᴅʙᴀᴄᴋ🤓', url='https://t.me/BLuVDS')
                 ],
                 [
-                    InlineKeyboardButton('Support Group', url='https://t.me/TN57_BotzSupport'),
-                    InlineKeyboardButton('Close🔐', callback_data='DM')
+                    InlineKeyboardButton('😼Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ👾', url='https://t.me/TN57_BotzSupport'),
+                    InlineKeyboardButton('☣️Lᴇᴇᴄʜ Gʀᴏᴜᴘ☣️', url='https://t.me/TN57_Leech')
                 ]
             ]
-        )
-
-@Client.on_callback_query()
-async def button(bot, update):
- 
-      if  'DM'  in update.data:
-                await update.message.delete()
+        ),
+        reply_to_message_id=update.message_id
+    )
+            return 
