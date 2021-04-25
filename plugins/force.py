@@ -66,7 +66,7 @@ async def text(bot, update):
     )
             return 
 
-@Clinton.on_callback_query()
+@Client.on_callback_query()
 async def button(bot, update):
  
       if  'DM'  in update.data:
