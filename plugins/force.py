@@ -61,10 +61,7 @@ async def text(bot, update):
                     InlineKeyboardButton('Close🔐', callback_data='DM')
                 ]
             ]
-        ),
-        reply_to_message_id=update.message_id
-    )
-            return 
+        )
 
 @Client.on_callback_query()
 async def button(bot, update):
