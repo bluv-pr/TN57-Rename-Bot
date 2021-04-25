@@ -58,10 +58,16 @@ async def text(bot, update):
                 ],
                 [
                     InlineKeyboardButton('Support Group', url='https://t.me/TN57_BotzSupport'),
-                    InlineKeyboardButton('Leech Group', url='https://t.me/TN57_Leech')
+                    InlineKeyboardButton('Close🔐', callback_data='DM')
                 ]
             ]
         ),
         reply_to_message_id=update.message_id
     )
             return 
+
+@Clinton.on_callback_query()
+async def button(bot, update):
+ 
+      if  'DM'  in update.data:
+                await update.message.delete()
